@@ -21,6 +21,11 @@ output "aws_cloudwatch_log_group_aws_lambda_stackgen_5533b1_function_name" {
 }
 
 
+output "aws_lambda_stackgen_5533b1_function_function_arn" {
+  value = module.stackgen_d4af4d11-1e34-56a1-94fb-539614dc7f20.function_arn
+  sensitive = false
+}
+
 output "aws_lambda_stackgen_5533b1_function_function_name" {
   value = module.stackgen_d4af4d11-1e34-56a1-94fb-539614dc7f20.function_name
   sensitive = false
@@ -38,10 +43,5 @@ output "aws_lambda_stackgen_5533b1_function_invoke_arn" {
 
 output "aws_lambda_stackgen_5533b1_function_arn" {
   value = module.stackgen_d4af4d11-1e34-56a1-94fb-539614dc7f20.arn
-  sensitive = false
-}
-
-output "aws_lambda_stackgen_5533b1_function_function_arn" {
-  value = module.stackgen_d4af4d11-1e34-56a1-94fb-539614dc7f20.function_arn
   sensitive = false
 }
