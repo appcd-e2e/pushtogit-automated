@@ -1,0 +1,12 @@
+{
+  "module": {
+    "stackgen_1c8ae87f-17d0-41e1-8aca-583f945ca0cc": {
+      "name": "test-gateway",
+      "source": "./modules/aws_api_gateway_http_api",
+      "stage_name": "dev",
+      "tags": {
+        "appstack": "test-github-flow"
+      }
+    }
+  }
+}
