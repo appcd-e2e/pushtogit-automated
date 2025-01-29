@@ -1,0 +1,52 @@
+{
+    "variable": {
+        "name": [
+            {
+                "type": "string",
+                "description": "The name of the cluster, unique within the project and location."
+            }
+        ],
+        "location": [
+            {
+                "type": "string",
+                "description": "The location (region or zone) in which the cluster master will be created, as well as the default node location.",
+                "nullable": true
+            }
+        ],
+        "initial_node_count": [
+            {
+                "type": "number",
+                "description": "The number of nodes to create in this cluster's default node pool. In regional or multi-zonal clusters, this is the number of nodes per zone. If you're using `Node Pool` resources with no default node pool, you'll need to set this to a value of at least 1, alongside setting `Remove Default Node Pool` to true.",
+                "default": 1
+            }
+        ],
+        "remove_default_node_pool": [
+            {
+                "type": "bool",
+                "description": "If true, deletes the default node pool upon cluster creation. If you're using `Container Node Pool` resources with no default node pool, this should be set to true, alongside setting `Initial Node Count` to at least 1.",
+                "default": false
+            }
+        ],
+        "enable_private_nodes": [
+            {
+                "type": "bool",
+                "description": "Enables the private cluster feature, creating a private endpoint on the cluster. In a private cluster, nodes only have RFC 1918 private addresses and communicate with the master's private endpoint via private networking.",
+                "default": true
+            }
+        ],
+        "http_load_balancing": [
+            {
+                "type": "bool",
+                "description": "The status of the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster.",
+                "default": true
+            }
+        ],
+        "oauth_scopes": [
+            {
+                "type": "list(string)",
+                "description": "List of scopes to apply to the default node pool. If `Remove Default Node Pool` is set to true, these values will not be used.",
+                "nullable": true
+            }
+        ]
+    }
+}
