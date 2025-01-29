@@ -1,0 +1,9 @@
+{
+  "output": {
+    "name": {
+      "description": "Cluster name.",
+      "sensitive": false,
+      "value": "${google_container_cluster.this.name}"
+    }
+  }
+}
