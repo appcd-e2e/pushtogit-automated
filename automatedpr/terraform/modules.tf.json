@@ -1,0 +1,55 @@
+{
+  "module": {
+    "stackgen_4db55003-b728-537a-8832-84543c7dbbfd": {
+      "assume_role_policy": "{\n\t\t\"Version\": \"2012-10-17\",\n\t\t\"Statement\":{\n\t\t\t\t\"Action\": \"sts:AssumeRole\",\n\t\t\t\t\"Effect\": \"Allow\",\n\t\t\t\t\"Principal\": {\n\t\t\t\t\t\"Service\": \"lambda.amazonaws.com\"\n\t\t\t\t}\n\t\t\t}\n\t}",
+      "description": null,
+      "force_detach_policies": true,
+      "inline_policy": [],
+      "name": "stackgen_b74598-role",
+      "source": "./modules/aws_iam_role",
+      "tags": null
+    },
+    "stackgen_a0c69765-d9a6-5933-b786-354c2e465041": {
+      "name": "/aws/lambda/stackgen_b74598-function",
+      "retention_in_days": 7,
+      "source": "./modules/aws_cloudwatch_log_group",
+      "tags": {
+        "appstack": "zTnC7ephDeWm1738694513575",
+        "component": "stackgen_b74598"
+      }
+    },
+    "stackgen_bf297316-12b7-5cf9-879d-cb5049c3abdf": {
+      "architecture": "x86_64",
+      "authorization_type": "NONE",
+      "cors": [],
+      "create_function_url": false,
+      "description": null,
+      "environment_variables": {},
+      "event_source_arn": null,
+      "event_source_mapping": [],
+      "filename": null,
+      "function_name": "stackgen_b74598-function",
+      "handler": "main.lambda_handler",
+      "image_uri": null,
+      "log_format": null,
+      "log_group_name": "${module.stackgen_a0c69765-d9a6-5933-b786-354c2e465041.name}",
+      "memory_size": 128,
+      "role": "${module.stackgen_4db55003-b728-537a-8832-84543c7dbbfd.arn}",
+      "runtime": "python3.8",
+      "s3_bucket": null,
+      "s3_key": null,
+      "s3_object_version": null,
+      "source": "./modules/aws_lambda",
+      "system_log_level": null,
+      "tags": null,
+      "timeout": 3
+    },
+    "stackgen_f3624fe4-9fe2-4108-abfc-37c4e4319c00": {
+      "name": "Writer-stackgen_e25941",
+      "policy": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"CloudwatchLogGroupa0c69765d9a65933b786354c2e4650410\",\n      \"Action\": [\n        \"logs:CreateLogGroup\"\n      ],\n      \"Effect\": \"Allow\",\n      \"Resource\": [\n        \"${module.stackgen_a0c69765-d9a6-5933-b786-354c2e465041.arn}\"\n      ]\n    },\n    {\n      \"Sid\": \"CloudwatchLogGroupa0c69765d9a65933b786354c2e4650411\",\n      \"Action\": [\n        \"logs:CreateLogStream\",\n        \"logs:PutLogEvents\"\n      ],\n      \"Effect\": \"Allow\",\n      \"Resource\": [\n        \"${module.stackgen_a0c69765-d9a6-5933-b786-354c2e465041.arn}:*\"\n      ]\n    }\n  ]\n}",
+      "role": "${module.stackgen_4db55003-b728-537a-8832-84543c7dbbfd.name}",
+      "role_type": "Writer",
+      "source": "./modules/aws_iam_role_policy"
+    }
+  }
+}
