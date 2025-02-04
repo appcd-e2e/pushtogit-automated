@@ -1,0 +1,13 @@
+{
+  "variable": {
+    "vpc_id": [
+      {
+        "default": "vpc1234",
+        "description": "",
+        "type": "string",
+        "nullable": true,
+        "sensitive": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"type":"GIT","url":"https://github.com/sg-tf-demo-org/custom_aws_internet_gateway.git","tokenRef":"c894da56-e459-49f2-8ff0-e19e2cb217c1","metadata":{"tag":"v1.2.3"}}

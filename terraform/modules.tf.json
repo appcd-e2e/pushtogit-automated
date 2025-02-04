@@ -1,0 +1,15 @@
+{
+  "module": {
+    "stackgen_55018cc7-b1db-4b9e-aa69-f2b7bfc63270": {
+      "source": "./modules/custom_multi_custom_aws_internet_gateway",
+      "vpc_id": "${module.stackgen_656ce801-9bf3-4b24-8f7c-bf2709c0abdf.arn}"
+    },
+    "stackgen_656ce801-9bf3-4b24-8f7c-bf2709c0abdf": {
+      "lambda_function_arn": "test_arn",
+      "source": "./modules/custom_multi_aws_sns_lambda_event_source_mapping",
+      "templateId": "6017f1aa-1e02-4e67-8628-d77ff5cf1f32",
+      "topic_arn": "test_topic",
+      "versionName": "v1.2.2"
+    }
+  }
+}
