@@ -1,0 +1,91 @@
+{
+  "module": {
+    "stackgen_424a24eb-d43f-4243-8a35-dfa54621d671": {
+      "name": "Writer-stackgen_91b9e7",
+      "policy": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"CloudwatchLogGroup203ce41936365bc3b237886b1b130c940\",\n      \"Action\": [\n        \"logs:CreateLogGroup\"\n      ],\n      \"Effect\": \"Allow\",\n      \"Resource\": [\n        \"${module.stackgen_203ce419-3636-5bc3-b237-886b1b130c94.arn}\"\n      ]\n    },\n    {\n      \"Sid\": \"CloudwatchLogGroup203ce41936365bc3b237886b1b130c941\",\n      \"Action\": [\n        \"logs:CreateLogStream\",\n        \"logs:PutLogEvents\"\n      ],\n      \"Effect\": \"Allow\",\n      \"Resource\": [\n        \"${module.stackgen_203ce419-3636-5bc3-b237-886b1b130c94.arn}:*\"\n      ]\n    }\n  ]\n}",
+      "role": "${module.stackgen_4ccdcd85-4a49-4f3d-85e9-f2ad00b01808.name}",
+      "role_type": "Writer",
+      "source": "./modules/aws_iam_role_policy"
+    },
+    "stackgen_4ccdcd85-4a49-4f3d-85e9-f2ad00b01808": {
+      "assume_role_policy": "{\n\t\t\"Version\": \"2012-10-17\",\n\t\t\"Statement\":{\n\t\t\t\t\"Action\": \"sts:AssumeRole\",\n\t\t\t\t\"Effect\": \"Allow\",\n\t\t\t\t\"Principal\": {\n\t\t\t\t\t\"Service\": \"lambda.amazonaws.com\"\n\t\t\t\t}\n\t\t\t}\n\t}",
+      "description": null,
+      "force_detach_policies": true,
+      "inline_policy": [],
+      "name": "stackgen_1c3abd-role",
+      "source": "./modules/aws_iam_role",
+      "tags": null
+    },
+    "stackgen_59ba927f-963a-48c6-ac5d-7a8d9f1597e7": {
+      "name": "/aws/lambda/stackgen_1c3abd-function",
+      "retention_in_days": 7,
+      "source": "./modules/aws_cloudwatch_log_group",
+      "tags": {
+        "appstack": "test-gov-appstack"
+      }
+    },
+    "stackgen_b289c291-8adf-44a6-8661-0490cdc6e5bf": {
+      "architecture": "x86_64",
+      "authorization_type": "NONE",
+      "cors": [],
+      "create_function_url": false,
+      "description": null,
+      "environment_variables": {},
+      "event_source_arn": null,
+      "event_source_mapping": [],
+      "filename": null,
+      "function_name": "stackgen_1c3abd-function",
+      "handler": "main.lambda_handler",
+      "image_uri": null,
+      "log_format": null,
+      "log_group_name": "${module.stackgen_59ba927f-963a-48c6-ac5d-7a8d9f1597e7.name}",
+      "memory_size": 128,
+      "role": "${module.stackgen_4ccdcd85-4a49-4f3d-85e9-f2ad00b01808.arn}",
+      "runtime": "python3.8",
+      "s3_bucket": null,
+      "s3_key": null,
+      "s3_object_version": null,
+      "source": "./modules/aws_lambda",
+      "system_log_level": null,
+      "tags": null,
+      "timeout": 3
+    },
+    "stackgen_b7502377-9ca5-429e-8241-e248713a36de": {
+      "application_failure_feedback_role_arn": null,
+      "application_success_feedback_role_arn": null,
+      "application_success_feedback_sample_rate": null,
+      "content_based_deduplication": false,
+      "delivery_policy": null,
+      "display_name": null,
+      "fifo_topic": false,
+      "firehose_failure_feedback_role_arn": null,
+      "firehose_success_feedback_role_arn": null,
+      "firehose_success_feedback_sample_rate": null,
+      "http_failure_feedback_role_arn": null,
+      "http_success_feedback_role_arn": null,
+      "http_success_feedback_sample_rate": null,
+      "lambda_failure_feedback_role_arn": null,
+      "lambda_success_feedback_role_arn": null,
+      "lambda_success_feedback_sample_rate": null,
+      "signature_version": null,
+      "source": "./modules/aws_sns",
+      "sqs_failure_feedback_role_arn": null,
+      "sqs_success_feedback_role_arn": null,
+      "sqs_success_feedback_sample_rate": null,
+      "tags": {
+        "appstack": "test-gov-appstack"
+      },
+      "topic_name": "test-lamda-sns",
+      "topic_policy": "",
+      "tracing_config": null,
+      "use_custom_kms_key_for_encryption": true
+    },
+    "stackgen_c591a6fb-456c-478a-bcef-b7f2b5423c89": {
+      "name": "Reader-stackgen_b02d48",
+      "policy": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"6e8e7c0719614e04929ff2d53166518f0\",\n      \"Action\": [\n        \"sns:ListTopics\",\n        \"sns:ListSubscriptionsByTopic\",\n        \"sns:GetTopicAttributes\",\n        \"sns:ListSubscriptions\",\n        \"sns:GetSubscriptionAttributes\"\n      ],\n      \"Effect\": \"Allow\",\n      \"Resource\": [\n        \"${module.stackgen_6e8e7c07-1961-4e04-929f-f2d53166518f.arn}\"\n      ]\n    }\n  ]\n}",
+      "role": "${module.stackgen_4ccdcd85-4a49-4f3d-85e9-f2ad00b01808.name}",
+      "role_type": "Reader",
+      "source": "./modules/aws_iam_role_policy"
+    }
+  }
+}
