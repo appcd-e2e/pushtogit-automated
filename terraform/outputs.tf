@@ -45,3 +45,14 @@ output "aws_lambda_stackgen_57302338-26eb-52d8-8e25-e214175c401d_invoke_arn" {
   value = module.stackgen_57302338-26eb-52d8-8e25-e214175c401d.invoke_arn
   sensitive = false
 }
+
+
+output "aws_subnet_stackgen_133e4f15-039f-4bad-ba29-d92434cefa5f_arn" {
+  value = module.stackgen_133e4f15-039f-4bad-ba29-d92434cefa5f.arn
+  sensitive = false
+}
+
+output "aws_subnet_stackgen_133e4f15-039f-4bad-ba29-d92434cefa5f_id" {
+  value = module.stackgen_133e4f15-039f-4bad-ba29-d92434cefa5f.id
+  sensitive = false
+}
