@@ -1,5 +1,13 @@
 {
   "module": {
+    "stackgen_133e4f15-039f-4bad-ba29-d92434cefa5f": {
+      "availability_zone": null,
+      "cidr_block": null,
+      "map_public_ip_on_launch": false,
+      "source": "./modules/aws_subnet",
+      "tags": {},
+      "vpc_id": "${var.vpc_id}"
+    },
     "stackgen_3c321c7f-8655-4e66-9faa-8e401ecf0f85": {
       "name": "Writer-stackgen_5fbabb",
       "policy": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"CloudwatchLogGroup3c3a443bbc4b5eb8bc8b428050bbfb2d0\",\n      \"Action\": [\n        \"logs:CreateLogGroup\"\n      ],\n      \"Effect\": \"Allow\",\n      \"Resource\": [\n        \"${module.stackgen_3c3a443b-bc4b-5eb8-bc8b-428050bbfb2d.arn}\"\n      ]\n    },\n    {\n      \"Sid\": \"CloudwatchLogGroup3c3a443bbc4b5eb8bc8b428050bbfb2d1\",\n      \"Action\": [\n        \"logs:CreateLogStream\",\n        \"logs:PutLogEvents\"\n      ],\n      \"Effect\": \"Allow\",\n      \"Resource\": [\n        \"${module.stackgen_3c3a443b-bc4b-5eb8-bc8b-428050bbfb2d.arn}:*\"\n      ]\n    }\n  ]\n}",
