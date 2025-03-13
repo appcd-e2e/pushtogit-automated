@@ -1,0 +1,7 @@
+{
+  "app_stack_name": "xIplusN328GH1741887176827",
+  "iac_type": "Terraform",
+  "provider": "aws",
+  "multi_env": false,
+  "exporter": "terraform"
+}
