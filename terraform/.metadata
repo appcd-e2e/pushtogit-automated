@@ -1,0 +1,7 @@
+{
+  "app_stack_name": "UydomVRQImo21742382288388",
+  "iac_type": "Terraform",
+  "provider": "aws",
+  "multi_env": false,
+  "exporter": "terraform"
+}
