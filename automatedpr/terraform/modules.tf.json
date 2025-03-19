@@ -1,0 +1,55 @@
+{
+  "module": {
+    "stackgen_0cae8dae-bf6f-5e0c-92ee-23976a255bc5": {
+      "name": "/aws/lambda/stackgen_bb1b88-function",
+      "retention_in_days": 7,
+      "source": "./modules/aws_cloudwatch_log_group",
+      "tags": {}
+    },
+    "stackgen_7e36183b-e657-4374-b2be-5b357126c112": {
+      "name": "Writer-stackgen_b6cce8",
+      "policy": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"CloudwatchLogGroup0cae8daebf6f5e0c92ee23976a255bc50\",\n      \"Action\": [\n        \"logs:CreateLogGroup\"\n      ],\n      \"Effect\": \"Allow\",\n      \"Resource\": [\n        \"${module.stackgen_0cae8dae-bf6f-5e0c-92ee-23976a255bc5.arn}\"\n      ]\n    },\n    {\n      \"Sid\": \"CloudwatchLogGroup0cae8daebf6f5e0c92ee23976a255bc51\",\n      \"Action\": [\n        \"logs:CreateLogStream\",\n        \"logs:PutLogEvents\"\n      ],\n      \"Effect\": \"Allow\",\n      \"Resource\": [\n        \"${module.stackgen_0cae8dae-bf6f-5e0c-92ee-23976a255bc5.arn}:*\"\n      ]\n    }\n  ]\n}",
+      "role": "${module.stackgen_96a04c15-8918-54a2-aa3d-a2bfdc40035d.name}",
+      "role_type": "Writer",
+      "source": "./modules/aws_iam_role_policy"
+    },
+    "stackgen_90f286be-3edb-58b1-a711-ef4d6f285a72": {
+      "architecture": "x86_64",
+      "authorization_type": "NONE",
+      "cors": [],
+      "create_function_url": false,
+      "description": null,
+      "environment_variables": {},
+      "event_source_arn": null,
+      "event_source_mapping": [],
+      "filename": null,
+      "function_name": "stackgen_bb1b88-function",
+      "handler": "main.lambda_handler",
+      "image_uri": null,
+      "log_format": null,
+      "log_group_name": "${module.stackgen_0cae8dae-bf6f-5e0c-92ee-23976a255bc5.name}",
+      "memory_size": 128,
+      "role": "${module.stackgen_96a04c15-8918-54a2-aa3d-a2bfdc40035d.arn}",
+      "runtime": "python3.8",
+      "s3_bucket": null,
+      "s3_key": null,
+      "s3_object_version": null,
+      "source": "./modules/aws_lambda",
+      "system_log_level": null,
+      "tags": null,
+      "timeout": 3
+    },
+    "stackgen_96a04c15-8918-54a2-aa3d-a2bfdc40035d": {
+      "assume_role_policy": "{\n\t\t\"Version\": \"2012-10-17\",\n\t\t\"Statement\":{\n\t\t\t\t\"Action\": \"sts:AssumeRole\",\n\t\t\t\t\"Effect\": \"Allow\",\n\t\t\t\t\"Principal\": {\n\t\t\t\t\t\"Service\": \"lambda.amazonaws.com\"\n\t\t\t\t}\n\t\t\t}\n\t}",
+      "description": null,
+      "force_detach_policies": true,
+      "inline_policy": [],
+      "max_session_duration": null,
+      "name": "stackgen_bb1b88-role",
+      "path": null,
+      "permissions_boundary": null,
+      "source": "./modules/aws_iam_role",
+      "tags": null
+    }
+  }
+}
