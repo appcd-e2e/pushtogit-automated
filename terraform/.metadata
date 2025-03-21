@@ -1,0 +1,7 @@
+{
+  "app_stack_name": "sRI2cfmLOZUT1742567794007",
+  "iac_type": "Terraform",
+  "provider": "aws",
+  "multi_env": false,
+  "exporter": "terraform"
+}
