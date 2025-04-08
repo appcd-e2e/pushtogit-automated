@@ -1,0 +1,7 @@
+{
+  "app_stack_name": "LvOtile2kjcL1744132479943",
+  "iac_type": "Terraform",
+  "provider": "aws",
+  "multi_env": false,
+  "exporter": "terraform"
+}
