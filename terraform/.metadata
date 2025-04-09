@@ -1,0 +1,7 @@
+{
+  "app_stack_name": "zyJrUjr0x7B71744190047477",
+  "iac_type": "Terraform",
+  "provider": "aws",
+  "multi_env": false,
+  "exporter": "terraform"
+}
