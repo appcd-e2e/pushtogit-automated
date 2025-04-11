@@ -1,0 +1,7 @@
+{
+  "app_stack_name": "cgbTtnppMob21744379651692",
+  "iac_type": "Terraform",
+  "provider": "aws",
+  "multi_env": false,
+  "exporter": "terraform"
+}
