@@ -1,0 +1,19 @@
+{
+  "module": {
+    "stackgen_0d22f1a5-dd3d-4522-b4c1-1f6a126ad6d0": {
+      "custom_placement_config": null,
+      "expiration_days": 179,
+      "force_destroy": false,
+      "kms_key_name": "",
+      "location": "US",
+      "log_sink_writer_identity": "serviceAccount:88248828-compute@developer.gserviceaccount.com",
+      "project_id": "qaproject",
+      "retention_policy": null,
+      "source": "git::https://github.com/sg-tf-demo-org/gcp-mods//./lz-modules/storage?ref=v0.0.1",
+      "storage_bucket_name": "testcustombucket",
+      "storage_class": "STANDARD",
+      "uniform_bucket_level_access": true,
+      "versioning": false
+    }
+  }
+}
