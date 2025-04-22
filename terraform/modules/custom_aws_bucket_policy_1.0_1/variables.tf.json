@@ -1,0 +1,18 @@
+{
+  "variable": {
+    "bucket": [
+      {
+        "type": "string",
+        "nullable": false,
+        "sensitive": false
+      }
+    ],
+    "policy": [
+      {
+        "default": "",
+        "nullable": false,
+        "sensitive": false
+      }
+    ]
+  }
+}
