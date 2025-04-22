@@ -1,0 +1,20 @@
+{
+  "module": {
+    "stackgen_4039aea1-932d-4a4b-a339-560a9ba2cc26": {
+      "bucket": "test-bucket",
+      "policy": {
+        "Statement": [
+          {
+            "Action": "sts:AssumeRole",
+            "Effect": "Allow",
+            "Principal": {
+              "Service": "lambda.amazonaws.com"
+            }
+          }
+        ],
+        "Version": "2012-10-17"
+      },
+      "source": "./modules/custom_aws_bucket_policy_1.0_1"
+    }
+  }
+}
