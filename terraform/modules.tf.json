@@ -1,0 +1,31 @@
+{
+  "module": {
+    "stackgen_cc92fc3f-68cc-4a4f-9a8b-ef8dadddc8de": {
+      "autoclass": false,
+      "bucket_policy_only": true,
+      "cors": [],
+      "custom_placement_config": null,
+      "enable_hierarchical_namespace": false,
+      "encryption": null,
+      "force_destroy": false,
+      "iam_members": [],
+      "labels": {
+        "test": "test"
+      },
+      "lifecycle_rules": [],
+      "location": "test",
+      "log_bucket": null,
+      "log_object_prefix": null,
+      "name": "test",
+      "project_id": "test",
+      "public_access_prevention": "inherited",
+      "requester_pays": false,
+      "retention_policy": null,
+      "soft_delete_policy": {},
+      "source": "git::https://github.com/sg-tf-demo-org/gcp-mods//./generic-modules/compute/gcp-core-gcs?ref=v0.0.6",
+      "storage_class": null,
+      "versioning": true,
+      "website": {}
+    }
+  }
+}
