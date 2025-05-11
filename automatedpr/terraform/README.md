@@ -1,0 +1,3 @@
+# README
+This is a readme file for IaC generated with StackGen.
+You can modify your appStack -> [here](http://main.dev.stackgen.com/appstacks/57c75677-c0d3-472e-9a7c-83da7e57bbcc)
