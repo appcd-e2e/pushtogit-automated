@@ -1,0 +1,7 @@
+{
+  "app_stack_name": "untitled-appStack-6fead8ce",
+  "iac_type": "Terraform",
+  "provider": "gcp",
+  "multi_env": false,
+  "exporter": "terraform"
+}
