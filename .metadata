@@ -1,0 +1,7 @@
+{
+  "app_stack_name": "test-export-3",
+  "iac_type": "Terraform",
+  "provider": "gcp",
+  "multi_env": false,
+  "exporter": "terraform"
+}
